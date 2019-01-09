@@ -27,4 +27,27 @@ $(document).ready(function() {
     }
 
   });
+
+    $("#birthday").submit(function(event) {
+      event.preventDefault();
+      let birthday = parseInt($("input#birthday").val());
+      let birthmonth = parseInt($("input#birthmonth").val());
+      let birthyear = parseInt($("input#birthyear").val());
+      let inputDate = new Day (birthday, birthmonth, birthyear);
+      let todaysDate = new Date();
+      let dd = todaysDate.getDate();
+      let mm = todaysDate.getMonth() +1;
+      let yyyy = todaysDate.getFullYear();
+      let today = new Day (dd, mm, yyyy);
+      if ((birthmonth==2 && birthday>29) || (birthmonth== 4 && birthday>30) || (birthmonth==6 && birthday>30) || (birthmonth==9 && birthday>30) ||(birthmonth==11 && birthday>30)) {
+        $(".result").text("This is not a valid date");
+      }
+      else {
+      let totalDays = inputDate.calculateDays();
+      let todaysDays = today.calculateDays();
+      let ageInDays = todaysDays-totalDays;
+      $(".result").text(`Your age in days is ${ ageInDays }`);
+      }
+
+  });
 });
