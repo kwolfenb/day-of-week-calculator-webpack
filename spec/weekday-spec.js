@@ -27,20 +27,36 @@ describe('Day', function() {
   });
 
   it('should count days up to a given year', function() {
-    let daysFromYear  = new Day(1,1,4);
-    console.log(daysFromYear.calculateDays());
+    let daysFromYear  = new Day(0,1,4);
     expect(daysFromYear.calculateDays()).toEqual(1095);
   });
 
   it('should add days up to month for leap year', function() {
-    let monthAndYear  = new Day(1,5,4);
-    console.log(monthAndYear.calculateDays());
+    let monthAndYear  = new Day(0,5,4);
     expect(monthAndYear.calculateDays()).toEqual(1216);
   });
   it('should add days up to month for non leap year', function() {
-    let monthAndYear  = new Day(1,3,5);
-    console.log(monthAndYear.calculateDays());
+    let monthAndYear  = new Day(0,3,5);
     expect(monthAndYear.calculateDays()).toEqual(1520);
+  });
+
+  it('should add days up to the input day', function() {
+    let monthAndYear  = new Day(9,1,2019);
+    expect(monthAndYear.calculateDays()).toEqual(737068);
+  });
+
+  it('should return day of week from the past', function() {
+    let dayOfWeek  = new Day(18, 2, 1995);
+    let days = dayOfWeek.calculateDays();
+    console.log(dayOfWeek.dayOfWeek(days));
+    expect(dayOfWeek.dayOfWeek(days)).toEqual("Saturday");
+  });
+
+  it('should return day of week in the Future', function() {
+    let dayOfWeek  = new Day(04, 07, 2030);
+    let days = dayOfWeek.calculateDays();
+    console.log(dayOfWeek.dayOfWeek(days));
+    expect(dayOfWeek.dayOfWeek(days)).toEqual("Thursday");
   });
 
   });

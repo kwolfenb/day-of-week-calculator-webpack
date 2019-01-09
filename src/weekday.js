@@ -21,6 +21,13 @@ export function Day(day, month, year) {
     
   }
 
+  Day.prototype.dayOfWeek = function(daysTotal) {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day=daysTotal % 7; 
+    let dayOfWeek = days[day];
+    return dayOfWeek;
+  }
+
   Day.prototype.calculateDays = function()
   {
     const nonLeapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -43,6 +50,12 @@ export function Day(day, month, year) {
         daysTotal += nonLeapYear[m];
       }
     }
+
+    for(let d = 0; d < this.day; d++) {
+      daysTotal += 1;
+
+      }
+    
     return daysTotal;
   }
 
