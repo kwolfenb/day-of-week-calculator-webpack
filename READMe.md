@@ -11,7 +11,6 @@ _Create a program that allow Users to convert there birthdays into days and Date
 
 ### Specs
 | Spec | Days | Months | Years |  Results  |
-| :-------------     | :------------- | :------------- | :------------- | | :------------- |
 | ## Program allows user to add new Date| Days: "1" | Months: "1" |  Years: 1998  |  Results: 1/1/1998  |
 | ## Program allows to input Date and convert into name of the week ** | Days: "9"  | Months: "1" |  Years: "2019" |  Result: "737068"  |
 | ## Program allows to Input Birthday  and converts into number of days | Days: "1" | Months: "9" |  Years: "2019" |  Result: "Wednesday"  |
