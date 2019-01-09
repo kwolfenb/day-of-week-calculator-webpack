@@ -13,7 +13,7 @@ _Create a program that allow Users to convert there birthdays into days and Date
 | Spec | Days | Months | Years |  Results  |
 | :-------------    | :------------- | :------------- | :------------- | :------------- |
 | ## Program allows user to add new Date| Days: "1" | Months: "1" |  Years: 1998  |  Results: 1/1/1998  |
-| ## Program allows to input Date and convert into name of the week ** | Days: "9"  | Months: "1" |  Years: "2019" |  Result: "737068"  |
+| ## Program allows to input Date and convert into name of the week  | Days: "9"  | Months: "1" |  Years: "2019" |  Result: "737068"  |
 | ## Program allows to Input Birthday  and converts into number of days | Days: "1" | Months: "9" |  Years: "2019" |  Result: "Wednesday"  |
 <!-- | ## Program determines if Date is a LeapYear| Days: "1" | Month: "1" |  Year: 1998  |  Results: Alex has client1  |
 | ## Program allows determines if Date is a non LeapYear| Days: "1" | Month: "1" |  Year: 1998  |  Results: Alex has client1  | -->
