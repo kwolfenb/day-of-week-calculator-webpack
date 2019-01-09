@@ -53,10 +53,20 @@ describe('Day', function() {
   });
 
   it('should return day of week in the Future', function() {
-    let dayOfWeek  = new Day(04, 07, 2030);
+    let dayOfWeek  = new Day(4, 7, 2030);
     let days = dayOfWeek.calculateDays();
     console.log(dayOfWeek.dayOfWeek(days));
     expect(dayOfWeek.dayOfWeek(days)).toEqual("Thursday");
+  });
+
+  it ('should calculate the age in days based on birthday', function() {
+    let birthDate = new Day (27,5,1990);
+    let today = new Date();
+    let todayDay = new Day(today.getDate(), today.getMonth(), today.getFullYear());
+    let totalDays = birthDate.calculateDays();
+    let todaysDays = todayDay.calculateDays();
+    let ageInDays = todaysDays - totalDays;
+    expect(ageInDays).toEqual(10454);
   });
 
   });
