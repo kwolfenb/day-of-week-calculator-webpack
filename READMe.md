@@ -45,4 +45,4 @@ _Create a program that allow Users to convert there birthdays into days and Date
 
 *This software is licensed under the MIT license.*
 
-Copyright (c) 2018 ** _Glen Sale & Kenny Wolfenberger **
+Copyright (c) 2019 ** _Glen Sale & Kenny Wolfenberger **
